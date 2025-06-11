@@ -1,9 +1,3 @@
-# Copyright (c) 2016, Konstantinos Kamnitsas
-# All rights reserved.
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the BSD license. See the accompanying LICENSE file
-# or read the terms at https://opensource.org/licenses/BSD-3-Clause.
 
 '''
 This script parses training logs and plots accuracy metrics (mean accuracy, sensitivity, specificity, DSC over samples and DSC of full segmentation of validation subjects).
