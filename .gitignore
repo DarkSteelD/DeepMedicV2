@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C extensions
+*.pyd
+
+# Distribution / packaging
+.Python
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# Data & models (tracked via DVC)
+# Ignore data & models content except DVC metafiles (.dvc) and placeholder .gitkeep
+data/**
+!data/**/*.dvc
+!data/.gitkeep
+models/**
+!models/**/*.dvc
+
+# DVC cache & temp
+.dvc/cache/
+.dvc/tmp/
+
+# Logs
+logs/
+
+# Secrets
+*.key
+*.pem
+.env
+
+# MacOS & system files
+.DS_Store
+Thumbs.db
