@@ -3,3 +3,4 @@
 ['remote "minio"']
     url = s3://khomidov
     region = us-east-1
+    endpointurl = http://89.223.69.137:9000
