@@ -28,6 +28,7 @@ venv/
 data/**
 !data/**/*.dvc
 !data/.gitkeep
+
 models/**
 !models/**/*.dvc
 
@@ -89,20 +90,15 @@ ENV/
 mlruns/
 mlartifacts/
 
-# DVC
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-data/interim/*
-!data/interim/.gitkeep
+# DVC cache
 .dvc/tmp
 .dvc/cache
 
-# Model files
+# Model files (but allow requirements.txt)
 *.pkl
 *.h5
 *.model
 *.joblib
-*.txt
+lgb_model.txt
+rf_model.pkl
 !requirements.txt
