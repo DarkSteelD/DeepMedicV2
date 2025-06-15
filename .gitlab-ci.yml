@@ -2,6 +2,7 @@ stages:
   - lint
   - data-validation
   - test
+  - deploy
 
 variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
@@ -61,7 +62,8 @@ dvc-data-check:
         echo "DVC models file not found"
         exit 1
       fi
-    - python -c "
+    - |
+      python -c "
       import pandas as pd
       import os
       
@@ -106,7 +108,8 @@ api-tests:
     - export PYTHONPATH="$CI_PROJECT_DIR/src:$PYTHONPATH"
   script:
     - python -m pytest tests/test_api.py -v --tb=short
-    - python -c "
+    - |
+      python -c "
       import sys
       sys.path.append('src')
       from fastapi.testclient import TestClient
