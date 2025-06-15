@@ -23,14 +23,10 @@ venv/
 # VSCode settings
 .vscode/
 
-# Data & models (tracked via DVC)
-# Ignore data & models content except DVC metafiles (.dvc) and placeholder .gitkeep
-data/**
-!data/**/*.dvc
-!data/.gitkeep
-
-models/**
-!models/**/*.dvc
+# Data files (DVC managed)
+data/raw/winequality-red.csv
+data/processed/
+data/interim/
 
 # DVC cache & temp
 .dvc/cache/
@@ -102,3 +98,9 @@ mlartifacts/
 lgb_model.txt
 rf_model.pkl
 !requirements.txt
+
+# Airflow temporary files
+airflow.cfg
+airflow.db
+simple_auth_manager_passwords.json.generated
+webserver_config.py
